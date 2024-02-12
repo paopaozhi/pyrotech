@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "pyrotech",
+	"version": "${version}",
+	"name": "pyrotech",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "Apache License 2.0",
+	"icon": "assets/pyrotech/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"ltd.paopaozhi.Pyrotech"
+		],
+		"client": [
+			"ltd.paopaozhi.PyrotechClient"
+		],
+		"fabric-datagen": [
+			"ltd.paopaozhi.PyrotechDataGenerator"
+		]
+	},
+	"mixins": [
+		"pyrotech.mixins.json",
+		{
+			"config": "pyrotech.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.6",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
